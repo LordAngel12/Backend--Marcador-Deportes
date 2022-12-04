@@ -69,4 +69,4 @@ routes.put("/:table/:field/:id",(req,res)=>{
 
     })
 })
-module.exports=routes //exportar la variable que necesito
+module.exports= routes //exportar la variable que necesito
