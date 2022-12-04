@@ -1,0 +1,28 @@
+###
+GET http://localhost:9000/api/usuarios HTTP/1.1
+
+###
+POST http://localhost:9000/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "usu_id":"2",
+    "usu_email": "angelpotes@gmail.com",
+    "usu_clave": "123456",
+    "usu_nombres": "miguel angel",
+    "usu_apellidos": "Potes"
+}
+
+###
+DELETE http://localhost:9000/api/usuarios/2 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/usuarios/1 HTTP/1.1
+Content-Type: application/json
+{
+    "usu_id":"2",
+    "usu_email": "angelpotes@gmail.com",
+    "usu_clave": "123456",
+    "usu_nombre": "miguel angel",
+    "usu_apellidos": "Potes"
+}
