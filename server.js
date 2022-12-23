@@ -8,8 +8,6 @@ const app = express()
 
 app.use(cors())
 
-
-
 app.set('port',9000)
 
 const dbOptions = {
@@ -20,20 +18,16 @@ const dbOptions = {
     database:'deportes'
 }
 
-//middleware ----- procesos en el intermedio entre una petición y una respuesta
 app.use(myconn(mysql,dbOptions,'single'))
-app.use(express.json()) //formato de entrega y recepción
-
-// routes -----
+app.use(express.json()) /
 app.get('/',(req,res)=>{
     res.send('Welcome to my APP2')
 })
 
-// se usa use, porque la petición esta creada en routes
 app.use('/api/',routes)
-
-
 
 app.listen(app.get('port'),()=>{
     console.log(`server running on port ${app.get('port')}`);
 })
+
+
